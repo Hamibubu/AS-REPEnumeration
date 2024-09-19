@@ -21,7 +21,7 @@ This Python script performs enumeration of Kerberos accounts by sending AS-REQ r
     cd your_repository
     ```
 
-2. Install the Impacket library:
+2. Install the Impacket library and pyasn1:
 
     ```bash
     pip install impacket pyasn1
