@@ -1,4 +1,4 @@
-# AS-REQ/AS-REQ Enumeration Tool
+# AS-REQ/AS-REP Enumeration Tool
 
 This Python script performs enumeration of Kerberos accounts by sending AS-REQ requests to the KDC (Key Distribution Center) without pre-authentication. It uses the Impacket library to create and send Kerberos AS-REQ packets to identify valid users in a domain.
 
